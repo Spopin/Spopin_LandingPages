@@ -1,0 +1,313 @@
+@font-face {
+        font-family: "Today SB";
+        src: 
+            url("../fonts/Today\ SB/_Aperçu Light.ttf") format("truetype"),
+            url("../fonts/Today\ SB/_Aperçu Italic.ttf") format("truetype"),
+    }
+@media screen and (min-width: 1080px) and (max-width: 3820px) {
+    * {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: 'Today SB', sans-serif;
+    }
+    body {
+        max-width: 100vw;
+        height: 100vh;
+    }
+    main {
+        max-width: 100vw;
+        min-height: 100vh;
+    }
+    .spopinTitleBackground {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../images/car_clouds_countryside.jpg");
+        background-size: cover;
+    }
+    .spopinTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: #00000070;
+    }
+    .spopinTitle > img {
+        width: 180px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .spopinTitle > h1 {
+        font-size: 2.8em;
+        line-height: 2.4em;
+        color: white;
+    }
+    .spopinSubtitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 30vh;
+        background-color: #35a543;
+    }
+    .spopinSubtitle > h2 {
+        margin: 2em auto 1em auto;
+        font-size: 2.4em;
+        color: white;
+    }
+    .spopinSubtitle > p {
+        margin: 1em auto 3em auto;
+        padding: 0 2em;
+        font-size: 1.6em;
+        color: white;
+    }
+    .spopinPlusAndForm {
+        display: flex;
+        width: 100%;
+        min-height: 500px;
+    }
+    .spopinPlusAndForm > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 500px;
+    }
+    .spopinPlusAndForm > div:first-child > div {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        height: 40px;
+        margin: 1em auto;
+    }
+    .spopinPlusAndForm > div:first-child > div > p {
+        padding: 0 0 0 1em;
+        font-size: 1.2em;
+    }
+    .spopinPlusAndForm > div:last-child > form {
+        width: 100%;
+        height: 100%;
+        background-color: #c2dfc4;
+    }
+    .spopinTestimonials {
+        display: flex;
+        width: 100%;
+        height: 300px;
+        background-color: #f4f4f4;
+    }
+    .spopinTestimonials > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .spopinTestimonials > div > p {
+        padding: 0 2em;
+    }
+    .Martine, .Andre, .Mickael {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1em;
+        border-radius: 75px;
+        box-shadow: 0px 0px 6px 1px #00000070;
+    }
+    .Martine {
+        background-image: url("../images/blond_woman.jpg");
+        background-size: cover;
+    }
+    .Andre {
+        background-image: url("../images/adult_with_glasses.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .Mickael {
+        background-image: url("../images/black_haired_man.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .spopinPartners {
+        width: 100%;
+        min-height: 300px;
+    }
+    .spopinPartners > h3 {
+        margin: 2em 0;
+        font-size: 2.2em;
+    }
+    .spopinPartners > div {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        min-height: 200px;
+    }
+    .spopinPartners > div > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: auto;
+    }
+    .spopinPartners > div > div > img {
+        width: 50%;
+        height: auto;
+    }
+    /* ---------------------------------------------- FORM CSS --------------------------------------------- */
+    .widgetDynamicSimulatorForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 420px;
+        height: 620px;
+        border-radius: 20px;
+        background-color: #ffffff;
+    }
+    .widgetDynamicSimulatorForm form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+    }
+    .widgetDynamicSimulatorForm form > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        width: 100%;
+    }
+    /* --------------------------------------------- RADIO CSS --------------------------------------------- */
+    .widgetDynamicSimulatorForm > form > div > input[type="radio"] {
+        display: none;
+    }
+    /* -------------------------------------------- PERSONS CSS -------------------------------------------- */
+    .widgetDynamicSimulatorForm > form > .personsDiv > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        border: 2px solid #35A543;
+        border-radius: 80px;
+        background-color: #ffffff;
+        cursor: pointer;
+        transition: all 1s ease;
+    }
+    .widgetDynamicSimulatorForm > form > .personsDiv > label > img {
+        width: 60%;
+        height: 60%;
+    }
+    /* --------------------------------------------- DAYS CSS ---------------------------------------------- */
+    .widgetDynamicSimulatorForm > form > .daysDiv > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22%;
+        height: 60px;
+        font-size: 0.8em;
+        border: 2px solid #35A543;
+        border-radius: 10px;
+        background-color: #ffffff;
+        cursor: pointer;
+        transition: all 1s ease;
+    }
+    /* -------------------------------------------- CARTYPE CSS -------------------------------------------- */
+    .widgetDynamicSimulatorForm > form > .carTypeDiv > label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        border: 2px solid #35A543;
+        border-radius: 80px;
+        background-color: #ffffff;
+        cursor: pointer;
+        transition: all 1s ease;
+    }
+    .carTypeDiv > label[for="microCitadine"] {
+        background-image: url("../images/fiat_500.jpg");
+        background-size: cover;
+    }
+    .carTypeDiv > label[for="citadine"] {
+        background-image: url("../images/renault_clio.jpg");
+        background-size: cover;
+    }
+    .carTypeDiv > label[for="monospace"] {
+        background-image: url("../images/renault_scenic.jpg");
+        background-size: cover;
+    }
+    .carTypeDiv p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        font-size: 0.6em;
+        color: #ffffff;
+        background-color: #00000090;
+    }
+    /* -------------------------------------------- CHECKED CSS -------------------------------------------- */
+    .widgetDynamicSimulatorForm > form > .personsDiv > input[type="radio"]:checked+label, .widgetDynamicSimulatorForm > form > .daysDiv > input[type="radio"]:checked+label {
+        color: #000000;
+        background-color: #35a543;
+    }
+    .widgetDynamicSimulatorForm > form > .carTypeDiv > input[type="radio"]:checked+label {
+        transform: scale(1.2);
+    }
+    /* --------------------------------------------- INPUT CSS --------------------------------------------- */
+    .widgetDynamicSimulatorForm select, .widgetDynamicSimulatorForm input[type="email"] {
+        width: 70%;
+        height: 40px;
+        text-align: center;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 4px 0 #9d9d9d;
+        background-color: #ffffff;
+    }
+    /* --------------------------------------------- SUBMIT CSS -------------------------------------------- */
+    .widgetDynamicSimulatorForm input[type="submit"] {
+        width: 60%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 0 2px 0 #9d9d9d;
+        color: #000000;
+        background-color: #35a543;
+        cursor: pointer;
+    }
+    .submitSuccess {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 40px;
+        margin-top: 0;
+        font-size: 0.8em;
+        border-radius: 10px;
+        color: #000000;
+        background-color: #35a543;
+    }
+    .widgetDynamicSimulatorForm h4 {
+        padding: 0 1em;
+    }
+    .fade-in {
+        animation: fade-in 1s ease-in-out;
+    }
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
