@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page - Audience 1</title>
+        <link rel="stylesheet" href="public/stylesheets/smartphone.css">
+        <link rel="stylesheet" href="public/stylesheets/tablet.css">
+        <link rel="stylesheet" href="public/stylesheets/laptop.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107859122-3"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-107859122-3');
+        </script>
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '549455252210210');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=549455252210210&ev=PageView&noscript=1"/>
+        </noscript>
+    </head>
+    <body>
+        <main>
+            <div class="spopinTitleBackground">
+                <div class="spopinTitle">
+                    <img src="public/images/logo_transparent.png" alt="Logo de Spopin">
+                    <h1>Votre forfait auto tout compris sans engagement </br> À partir de 259€/mois</h1>
+                </div>
+            </div>
+            <div class="spopinSubtitle">
+                <h2>La liberté d'une location sans contrainte</h2>
+                <p>Ne vous préoccupez plus de rien ! Tout est compris dans notre offre. Ayez enfin la liberté de profiter de votre voiture sans contraintes et à moindre coût.</p>
+            </div>
+            <div class="spopinPrices">
+                <div class="halfTime">
+                    <p>Forfait mi-temps</p>
+                    <p>À partir de </br> <span>259€ / mois</span></p>
+                    <p>Du lundi au vendredi ou du samedi au dimanche</p>
+                    <p>1000 kms inclus</p>
+                </div>
+                <div class="fullTime">
+                    <p>Forfait plein temps</p>
+                    <p>À partir de </br> <span>399€ / mois</span></p>
+                    <p>À consommer seul ou À partager à plusieurs</p>
+                    <p>2000 kms inclus</p>
+                </div>
+            </div>
+            <div class="spopinPlusAndForm">
+                <div>
+                    <div>
+                        <img src="public/images/coche_verte.png" alt="Image d'une coche verte">
+                        <p>Sans engagement</p>
+                    </div>
+                    <div>
+                        <img src="public/images/coche_verte.png" alt="Image d'une coche verte">
+                        <p>Assurance tout risque</p>
+                    </div>
+                    <div>
+                        <img src="public/images/coche_verte.png" alt="Image d'une coche verte">
+                        <p>Entretien & Réparation</p>
+                    </div>
+                    <div>
+                        <img src="public/images/coche_verte.png" alt="Image d'une coche verte">
+                        <p>Assistance 24h / 24</p>
+                    </div>
+                    <div>
+                        <img src="public/images/coche_verte.png" alt="Image d'une coche verte">
+                        <p>Service client 7j / 7</p>
+                    </div>
+                </div>
+                <div id="widgetApp1" class="widgetDynamicSimulatorForm">
+                    <form action="https://formspree.io/bonjour@spopin.com" @submit="saveSubmit()" method="POST">
+                        <p v-show="submitStatus" class="submitSuccess fade-in">{{ submitMsg }}</p>
+                        <h4>Avez-vous prévu de partager la location ?</h4>
+                        <div class="personsDiv">
+                            <input id="yes" type="radio" name="persons" value="yes" v-model="persons">
+                            <label for="yes" required>
+                                <p>Oui</p>
+                            </label>
+                            <input id="no" type="radio" name="persons" value="no" v-model="persons">
+                            <label for="no">
+                                <p>Non</p>
+                            </label>
+                        </div>
+                        <h4 v-show="persons != ``">Choisissez votre forfait</h4>
+                        <div v-show="persons != ``" class="daysDiv">
+                            <input id="halfTime" type="radio" name="days" value="halfTime" v-model="days">
+                            <label class="fade-in" for="halfTime">Mi-Temps</label>
+                            <input id="fullTime" type="radio" name="days" value="fullTime" v-model="days">
+                            <label class="fade-in" for="fullTime">Plein Temps</label>
+                        </div>
+                        <h4 v-show="( persons != `` && days != `` )">Choisissez votre type de voiture</h4>
+                        <div v-show="( persons != `` && days != `` )" class="carTypeDiv fade-in">
+                            <input id="microCitadine" type="radio" name="carType" value="microCitadine" v-model="carType">
+                            <label for="microCitadine" required>
+                                <p>Micro-Citadine</p>
+                            </label>
+                            <input id="citadine" type="radio" name="carType" value="citadine" v-model="carType">
+                            <label for="citadine">
+                                <p>Citadine</p>
+                            </label>
+                            <input id="monospace" type="radio" name="carType" value="monospace" v-model="carType">
+                            <label for="monospace">
+                                <p>Monospace</p>
+                            </label>
+                        </div>
+                        <input v-if="( persons != `` && days != `` && carType != `` ) || ( persons == `group` && numPersons != `` && days != `` && carType != `` )" class="fade-in" type="email" name="_replyto" placeholder="Indiquez votre adresse email" v-model="email" required>
+                        <input v-if="( persons != `` && days != `` && carType != `` && email != `` ) || ( persons == `group` && numPersons != `` && days != `` && carType != `` && email != `` )" class="fade-in" type="submit" value="Recevoir mon devis gratuitement">
+                    </form>
+                </div>
+            </div>
+            <div class="spopinTestimonials">
+                <div>
+                    <div class="Martine"></div>
+                    <p>Service pratique et économique. Equipe réactive et à l'écoute. Je recommande. </br></br> <b>Martine L.</b></p>
+                </div>
+                <div>
+                    <div class="Andre"></div>
+                    <p>Super rapport qualité / prix, les promesses sont tenues, bravo ! </br></br> <b>André M.</b></p>
+                </div>
+                <div>
+                    <div class="Mickael"></div>
+                    <p>Voiture toujours dispo quand j'en ai besoin, plus besoin d'aller je ne sais où la chercher. Top les gars ! </br></br> <b>Mickaël D.</b></p>
+                </div>
+            </div>
+            <div class="spopinPartners">
+                <h3>Ils nous font confiance</h3>
+                <div>
+                    <div>
+                        <img src="public/images/logo_allianz.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="public/images/logo_bnp.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="public/images/logo_sg.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="public/images/logo_moove_lab.jpg" alt="">
+                    </div>
+                    <div>
+                        <img src="public/images/logo_hec.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            
+        </footer>
+        <script src="public/javascripts/script.js"></script>
+    </body>
+</html>
