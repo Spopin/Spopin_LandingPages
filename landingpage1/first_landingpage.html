@@ -82,27 +82,18 @@
                 </div>
                 <div id="widgetApp1" class="widgetDynamicSimulatorForm">
                     <form action="https://formspree.io/bonjour@spopin.com" @submit="saveSubmit()" method="POST">
+                        <h3>Obtenez votre devis gratuit</h3>
                         <p v-show="submitStatus" class="submitSuccess fade-in">{{ submitMsg }}</p>
-                        <h4>Avez-vous prévu de partager la location ?</h4>
-                        <div class="personsDiv">
-                            <input id="yes" type="radio" name="persons" value="yes" v-model="persons">
-                            <label for="yes" required>
-                                <p>Oui</p>
-                            </label>
-                            <input id="no" type="radio" name="persons" value="no" v-model="persons">
-                            <label for="no">
-                                <p>Non</p>
-                            </label>
-                        </div>
-                        <h4 v-show="persons != ``">Choisissez votre forfait</h4>
-                        <div v-show="persons != ``" class="daysDiv">
+                        <h4>Choisissez votre forfait</h4>
+                        <p style="font-style: italic">Ajustez votre utilisation : du Lundi au Vendredi, du Samedi au Dimanche ou tous les jours</p>
+                        <div class="daysDiv">
                             <input id="halfTime" type="radio" name="days" value="halfTime" v-model="days">
                             <label class="fade-in" for="halfTime">Mi-Temps</label>
                             <input id="fullTime" type="radio" name="days" value="fullTime" v-model="days">
                             <label class="fade-in" for="fullTime">Plein Temps</label>
                         </div>
-                        <h4 v-show="( persons != `` && days != `` )">Choisissez votre type de voiture</h4>
-                        <div v-show="( persons != `` && days != `` )" class="carTypeDiv fade-in">
+                        <h4 v-show="days != ``">Choisissez votre type de voiture</h4>
+                        <div v-show="days != ``" class="carTypeDiv fade-in">
                             <input id="microCitadine" type="radio" name="carType" value="microCitadine" v-model="carType">
                             <label for="microCitadine" required>
                                 <p>Micro-Citadine</p>
@@ -114,6 +105,18 @@
                             <input id="monospace" type="radio" name="carType" value="monospace" v-model="carType">
                             <label for="monospace">
                                 <p>Monospace</p>
+                            </label>
+                        </div>
+                        <h4 v-show="(days != `` && carType != ``)">Avez-vous prévu de partager la location ?</h4>
+                        <p v-show="(days != `` && carType != ``)" style="font-style: italic">Partagez une voiture ainsi que le coût mensuel jusqu'à 4 conducteurs</p>
+                        <div v-show="(days != `` && carType != ``)" class="personsDiv">
+                            <input id="yes" type="radio" name="persons" value="yes" v-model="persons">
+                            <label for="yes" required>
+                                <p>Oui</p>
+                            </label>
+                            <input id="no" type="radio" name="persons" value="no" v-model="persons">
+                            <label for="no">
+                                <p>Non</p>
                             </label>
                         </div>
                         <input v-if="( persons != `` && days != `` && carType != `` ) || ( persons == `group` && numPersons != `` && days != `` && carType != `` )" class="fade-in" type="email" name="_replyto" placeholder="Indiquez votre adresse email" v-model="email" required>
