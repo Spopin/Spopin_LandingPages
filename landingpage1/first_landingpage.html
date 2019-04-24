@@ -84,13 +84,14 @@
                     <form action="https://formspree.io/bonjour@spopin.com" @submit="saveSubmit()" method="POST">
                         <h3>Obtenez votre devis gratuit</h3>
                         <p v-show="submitStatus" class="submitSuccess fade-in">{{ submitMsg }}</p>
+                        <h4>Indiquez votre code postal</h4>
+                        <input type="number" placeholder="Code Postal" name="zipCode" v-model="zipCode">
                         <h4>Choisissez votre forfait</h4>
-                        <p style="font-style: italic">Ajustez votre utilisation : du Lundi au Vendredi, du Samedi au Dimanche ou tous les jours</p>
-                        <div class="daysDiv">
+                        <div v-show="zipCode != ``" class="daysDiv">
                             <input id="halfTime" type="radio" name="days" value="halfTime" v-model="days">
-                            <label class="fade-in" for="halfTime">Mi-Temps</label>
+                            <label class="fade-in" for="halfTime">Mi-Temps<br>( du Lundi au Vendredi )<br>( du Samedi au Dimanche )</label>
                             <input id="fullTime" type="radio" name="days" value="fullTime" v-model="days">
-                            <label class="fade-in" for="fullTime">Plein Temps</label>
+                            <label class="fade-in" for="fullTime">Plein Temps<br>( Tous les jours )</label>
                         </div>
                         <h4 v-show="days != ``">Choisissez votre type de voiture</h4>
                         <div v-show="days != ``" class="carTypeDiv fade-in">

@@ -2,6 +2,7 @@ var vue = new Vue({
     el: "#widgetApp1",
     data: () => {
         return {
+            zipCode: "",
             persons: "",
             days: "",
             carType: "",

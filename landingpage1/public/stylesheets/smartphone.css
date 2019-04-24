@@ -216,8 +216,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 22%;
-        height: 30px;
+        min-width: 38%;
+        min-height: 60px;
         font-size: 0.8em;
         border: 2px solid #35A543;
         border-radius: 10px;
@@ -304,6 +304,12 @@
     }
     .widgetDynamicSimulatorForm h4 {
         padding: 0 1em;
+    }
+    .widgetDynamicSimulatorForm input[type="number"] {
+        width: 50%;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
     }
     .fade-in {
         animation: fade-in 1s ease-in-out;
