@@ -120,7 +120,7 @@
                                 <p>Non</p>
                             </label>
                         </div>
-                        <input v-if="( persons != `` && days != `` && carType != `` ) || ( persons == `group` && numPersons != `` && days != `` && carType != `` )" class="fade-in" type="email" name="_replyto" placeholder="Indiquez votre adresse email" v-model="email" required>
+                        <input v-if="( persons != `` && days != `` && carType != `` ) || ( persons == `group` && numPersons != `` && days != `` && carType != `` )" class="fade-in" type="email" name="_replyto" placeholder="Indiquez votre adresse email pour recevoir votre devis" v-model="email" required>
                         <input v-if="( persons != `` && days != `` && carType != `` && email != `` ) || ( persons == `group` && numPersons != `` && days != `` && carType != `` && email != `` )" class="fade-in" type="submit" value="Recevoir mon devis gratuitement">
                     </form>
                 </div>
