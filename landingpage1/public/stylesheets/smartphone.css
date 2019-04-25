@@ -34,12 +34,16 @@
         position: relative;
         background-color: #00000070;
     }
-    .spopinTitle > img {
-        width: 120px;
-        height: 40px;
+    .spopinTitle > a {
+        width: 180px;
+        height: 60px;
         position: absolute;
         top: 0;
         left: 0;
+    }
+    .spopinTitle > a > img {
+        width: 100%;
+        height: 100%;
     }
     .spopinTitle > h1 {
         padding: 1em;
