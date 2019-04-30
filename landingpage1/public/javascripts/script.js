@@ -31,21 +31,17 @@ var vue = new Vue({
             });
             this.submitStatus = true;
             this.submitMsg = "Nous reviendrons vers vous avec votre devis rapidement.";
-            console.log(this.submits);
         }
     },
     watch: {
         persons(value) {
-            console.log(value);
             this.saveInputs.persons.push(value);
         },
         days(value) {
-            console.log(value);
             this.saveInputs.days.push(value);
         },
         carType(value) {
-            console.log(value);
             this.saveInputs.carType.push(value);
         }
     }
-})
+});
