@@ -50,6 +50,7 @@
         position: absolute;
         top: 0;
         right: 0;
+        text-decoration: none;
         background-color: #35a543;
         color: #f4f4f4;
     }
