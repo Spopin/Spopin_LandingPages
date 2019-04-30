@@ -113,7 +113,7 @@
                         <p v-show="submitStatus" class="submitSuccess fade-in">{{ submitMsg }}</p>
                         <h4>Indiquez votre code postal</h4>
                         <input type="number" placeholder="Code Postal" name="zipCode" v-model="zipCode">
-                        <h4>Choisissez votre forfait</h4>
+                        <h4 v-show="zipCode != ``">Choisissez votre forfait</h4>
                         <div v-show="zipCode != ``" class="daysDiv">
                             <input id="halfTime" type="radio" name="days" value="halfTime" v-model="days">
                             <label class="fade-in" for="halfTime">Mi-Temps<br>( du Lundi au Vendredi )<br>( du Samedi au Dimanche )</label>
