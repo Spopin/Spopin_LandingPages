@@ -34,12 +34,24 @@
         position: relative;
         background-color: #00000070;
     }
-    .spopinTitle > a {
+    .spopinTitle > .spopinBttn {
         width: 180px;
         height: 60px;
         position: absolute;
         top: 0;
         left: 0;
+    }
+    .spopinTitle > .simulatorForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #35a543;
+        color: #f4f4f4;
     }
     .spopinTitle > a > img {
         width: 100%;
